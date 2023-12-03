@@ -9,3 +9,14 @@ function sumOfNum(n) {
 }
 
 console.log(sumOfNum(3));
+
+// using recursion way
+function sumOfNum(n) {
+  if (n < 0) {
+    return 0;
+  } else {
+    return n + sumOfNum(n - 1);
+  }
+}
+
+console.log(sumOfNum(3));
