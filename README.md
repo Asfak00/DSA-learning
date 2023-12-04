@@ -9,6 +9,7 @@
     <li>Binary Search </li>
     <li>Bubble Sort </li>
     <li>Selection Sort </li>
+    <li>Insertion Sort </li>
 </ul>
 
 </br>
@@ -130,6 +131,17 @@ https://visualgo.net/en/sorting
 
 </br>
 <img src="https://scaler.com/topics/images/selection-sort-example.webp">
+
+</br>
+video link - https://visualgo.net/en/sorting
+
+<h2>Insertion Sort</h2>
+> Insertion Sort ঠিক selection sort এর মতই কিন্তু এখানে পরিবর্তনটি হচ্ছে, আমরা selection sorting এ বাম পাশের number এর সাথে ডান পাশের number এর ছোট এবং বড় কি না সেটা চেক করতাম। কিন্তু insertion sorting এ আমরা একই ভাবে ডান পাশের টার সাথে ছোট বড় চেক করবো কিন্তু যদি ডান পাশের number টি বাম পাশের number এত ছোট হয় যে সেটাকে আমার আর ২ ইনডেক্স সামনে আনার প্রয়োজন হচ্ছে তখন insertion sort এ backword cheking করা হয় এবং ওই number এর সঠিক পজিশনে পৌঁচে দেওয়া হয়। এবং insetion sorting এ আমরা এইভাবে চেকিং করতে করতে সামনের দিকে এগুতে থাকি আর এইরকম পরিস্তিতির সম্মুখীন হলে backword checking এর মাধ্যমে ওই number টির সঠিক পজিশনে নেয়া হয়।
+
+> আপনাদের বুঝার জন্য নিচে picture যুক্ত করেছি এবং একটি video ও যুক্ত করে দিয়েছি যাতে আপানারা খুব সহজে বিষয়টি বুঝতে পারেন।
+
+</br>
+<img src="https://www.boardinfinity.com/blog/content/images/2022/11/Your-paragraph-text--1-.jpg">
 
 </br>
 video link - https://visualgo.net/en/sorting
