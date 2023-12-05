@@ -13,6 +13,8 @@
 </ul>
 
 </br>
+<h1>Algorithms</h1>
+</br>
 
 <h2>Big O Notation</h2>
 > Big-O notation হচ্ছে আমাদের কোনো একটা function এর ইনপুট বাড়ার সাথে সাথে কতটা টাইম কমপ্লেক্সিটি ও কতটা স্পেস কমপ্লেক্সিটি হচ্ছে সেটা নির্ণয় করা। এটি একটি টুল যার সাহায্যে কোনো একটা অ্যালগরিদমের রানটাইমের উপর ভিত্তি করে টাইম কমপ্লেক্সিটি বের করা যায়।
@@ -145,3 +147,7 @@ video link - https://visualgo.net/en/sorting
 
 </br>
 video link - https://visualgo.net/en/sorting
+
+</br>
+<h1>Data Structure </h1>
+</br>
