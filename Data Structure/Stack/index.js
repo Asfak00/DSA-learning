@@ -11,8 +11,8 @@ class Stack {
   }
 
   // this is a mehtod to delete value in the array
-  pop(value) {
-    this.array.pop(value);
+  pop() {
+    this.array.pop();
 
     return this.array;
   }
