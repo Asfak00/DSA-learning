@@ -13,6 +13,7 @@
     <li>Stack</li>
     <li>Queue</li>
     <li>Linked List</li>
+    <li>Binary Tree</li>
 </ul>
 
 </br>
@@ -206,3 +207,148 @@ video link - https://visualgo.net/en/sorting
 > Linked List যেহেতু অনেক বড় একটি টপিক তাই আমি এই টপিক এর জন্য আলাদাভাবে আরেকটি রিপোজিটরি তৈরি করেছি এবং সেখানে Linked List নিয়ে খুব ভালোভাবে আলোচনা করার চেষ্টা করেছি এবং নিচে সেই রিপোজিটরির লিংক দিয়েছি,
 
 <b>Repository Link - </b> https://github.com/Asfak00/linked-list-full-explained
+
+</br>
+<h1>Binary Tree</h1>
+> যে ট্রি এর নোডগুলোতে সর্বোচ্চ দুইটি child থাক্কে পার তাকে বাইনারি ট্রি বলা হয়। নোডগুলোতে লিঙ্কড লিস্টের মোট এর বা একাধিক ডেটা স্টোর করার ফিল্ড/ভেরিয়েবল থাকতে পারে। আর থাকবে এই নোডের left child এবং right child এর মেমরি এড্রেস। যার মাধ্যমে এদেরকে অ্যাক্সেস করা যায়।
+
+</br>
+<img src="https://1.bp.blogspot.com/-uwvGSZsq50I/VRlxk1gEMhI/AAAAAAAAAMc/PdGGP_jpowI/s1600/binary%2Btree.gif" alt="reference image">
+
+</br>
+<b>Binary Tree হচ্ছে ৩ প্রকারঃ</b>
+
+<ol>
+<li>Full Binary Tree</li>
+<li>Complete Binary Tree</li>
+<li>Perfect Binary Tree</li>
+</ol>
+
+<h3>Full Binary Tree</h3>
+> এমন একটা বাইনারি ট্রি যার নোডগুলোতে ০ থেকে ২ টি child থাকতে পারে। অর্থাৎ কোনও নোডে একটা child থাকলে সেটা full binary tree হবে না। একে proper binary tree, strictly binary tree বা plane binary tree বলা হয়।
+<h3>Complete Binary Tree</h3>
+> যে বাইনারি ট্রি এর শেষ লেভেল বাদে বাকি সব লেভেল সম্পূর্ণ ভাবে child দ্বারা পূর্ণ তাকে Complete Binary Tree বলে। অর্থাৎ সবগুলো নোডেই দুটি করে child আছে এবং শেষের লেভেলের ক্ষেত্রে নোডগুলো fill up হতে হবে একদম বাম বাশ থেকে। বামের দিকের কোনো একটা নোডের জায়গা ফাঁকা রেখে ডান দিকে নোড যুক্ত করলে তাকে Complete Binary Tree বলা যাবে না।
+<h3>Perfect Binary Tree</h3>
+> যেই বাইনারি ট্রি এর প্রত্যেকটি inteior node দুটি child থাকে এবং সকল leaf এর depth ও level একই হবে।
+
+</br>
+<img src="https://3.bp.blogspot.com/-j894yCMSzk4/VRl6aBTepEI/AAAAAAAAAMs/Tjx5oVqZ9oE/s1600/binary%2Btree.gif" alt="reference image">
+
+<h2>Binary Search Tree - Add Node</h2>
+> আমরা জানি যে আমাদের binary tree তে একটি root রয়েছে। এবং সেই root এর under এ left এবং right রয়েছে। আর binary tree এর left এ থাকা সব node কিন্তু ছোট হয়ে থাকে এবং right এ থাকা সব node বড় হয়ে থাকে। তাই আমরা যে নতুন node যুক্ত করতে চাচ্ছি যেটা বড় হলে right এ পাঠিয়ে দিবো আর ছোট হলে left এ পাঠিয়ে দিবো। এখন প্রথমে আমাদের চেক করতে হবে যে আমাদের tree তে আধো কোনো root আছে কি না কারণ শুরুর দিকে তো আমাদের কোনো root থাকবে না তাহলে আমাদের প্রথমে root তৈরি করতে হবে। এবং সেজন্যই আমরা চেক করবো যে আমাদের কোনো root আছে কি না যদি না থাকে তাহলে আমরা যে নতুন node যুক্ত করতে চাচ্ছি সেটাকে বানিয়ে দিবো root। আর যদি আমাদের tree তে root থেকে থাকে তাহলে আমরা চেক করবো যে আমরা যে নতুন node যুক্ত করতে চাচ্ছি সেটি কি আমাদের root এর চেয়ে বড় নাকি ছোট। যদি ছোট হয় তাহলে নতুন node কে পাঠিয়ে দিবো left এর দিকে আর যদি বড় হয় তাহলে নতুন node কে পাঠিয়ে দিবো right এর দিকে। এখন যখন নতুন node left অথবা right এ যাবে তখন ওইখানে ও তো left এবং right থাকবে। তাহলে আমরা যখন বুঝে যাবো যে আমাদের নতুন node আমাদের root এর চেয়ে বড় নাকি ছোট তখন তো left অথবা right এ পাঠাবো এবং যেদিকেই পাঠাই না কেনো ওইদিকে যাওয়ার আগে আবার চেক করবো যে অইখানে কোনো node আছে নাকি যদি না থাকে তাহলে সরাসরি ওইখানে আমাদের নতুন node বসিয়ে দিবো আর যদি থেকে থাকে তাহলে আমরা আমাদের আগের যে root ছিলো সেটাকে করে দিবো এখন এইখানে থাকা node কে এবং আবার চেক করবো যে এই root এর চেয়ে বড় নাকি ছোট আমাদের নতুন node টি এবং এভাবেই আমাদের node যুক্ত করার প্রসেস চলতে থাকবে এবং ঠিক সেইম ভাবেই right এর দিকে ও।
+
+</br>
+
+> নিচে কোড দেওয়া হলো এবং সাথে কমেন্ট করে বুঝানো হলো কোন লাইন কি কাজ করছে।
+
+```js
+// add node in binary tree
+
+// এখানে একটি টেম্পলেট তৈরি করা হলো নতুন node এর জন্য যাতে পরবর্তীতে যেকোনো জায়গায় ব্যবহার করা যায়।
+class Node {
+  constructor(value) {
+    this.leftChid = null;
+    this.rightChild = null;
+    this.value = value;
+  }
+}
+
+class BinaryTree {
+  constructor() {
+    this.root = null;
+  }
+
+  // add method
+  addNode(value) {
+    // নতুন node একটি variable এ রাখা হলো।
+    let newNode = new Node(value);
+
+    // চেক করা হলো যদি root null হয়ে থাকে তাহলে আমাদের root হয়ে যাবে নতুন যে node যুক্ত করতে চাচ্ছি সেটি। আর null না হলে else চলবে।
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      // currentRoot variable এর মধ্যে আমাদের tree এর যে root রয়েছে তাকে রাখলাম।
+      let currentRoot = this.root;
+
+      // এখানে একটি বুলিয়ান value রাখলাম যাতে পরবর্তীতে প্রোগ্রাম রান ব্রেক করতে পারি।
+      let added = false;
+
+      // while loop চলবে যদি আমাদের added true না হয় এবং যদি currentRoot null না হয় তাহলে।
+      while (!added && currentRoot) {
+        // যদি আমাদের নতুন node আমাদের tree এর currentRoot এর value এর চেয়ে ছোট হয় তাহলে
+        if (value < currentRoot.value) {
+          // যদি আমাদের currentRoot এর left এ কোনো node না থাকে তাহলে
+          if (currentRoot.leftChid === null) {
+            // currentRoot এর left সমান হয়ে যাবে আমাদের নতুন node
+            currentRoot.leftChid = newNode;
+
+            // added কে true করে দিলাম কারণ আমরা নতুন node যুক্ত করে নিলে তো আমাদের আর এই প্রোগ্রাম চালানোর প্রয়োজন নাই তাই।
+            added = true;
+          }
+          // যদি আমাদের currentRoot এর left এ কোনো node থাকে তাহলে
+          else {
+            // এখন আমাদের currentRoot হয়ে যাবে currenRoot এ থাকা left
+            currentRoot = currentRoot.leftChid;
+          }
+        }
+        // যদি আমাদের নতুন node আমাদের tree এর currentRoot এর value থেকে বড় হয় তাহলে
+        else if (value > currentRoot.value) {
+          // যদি আমাদের currentRoot এর right এ কোনো node না থাকে তাহলে
+          if (currentRoot.rightChild === null) {
+            // currentRoot এর right সমান হয়ে যাবে আমাদের নতুন node
+            currentRoot.rightChild = newNode;
+
+            // added কে true করে দিলাম কারণ আমরা নতুন node যুক্ত করে নিলে তো আমাদের আর এই প্রোগ্রাম চালানোর প্রয়োজন নাই তাই।
+            added = true;
+          }
+          // যদি আমাদের currentRoot এর right এ কোনো node থাকে তাহলে
+          else {
+            // এখন আমাদের currentRoot হয়ে যাবে currenRoot এ থাকা right
+            currentRoot = currentRoot.rightChild;
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+</br>
+<h2>Binary Search Tree - Search Node</h2>
+> binary tree তে আমরা যেহেতু জানি যে root থেকে left এর দিকে যেসব সংখ্যা থাকবে সেগুলো সব ছোট হবে root এর চেয়ে এবং right এর দিকে যেসব সংখ্যা থাকবে সেগুলো সব বড় হবে root এর চেয়ে তাহলে আমাদের এখানে search করা খুবই সহজ হয়ে গেছে। আমরা প্রথমে চেক করে নিবো আমাদের root আছে কি না যদি থাকে তাহলে বাকি কাজ করবো না হলে সেখানেই রিটার্ন করে দিবো null। আর যদি থাকে তাহলে আমরা যে node টি খুজতে চাচ্ছি সেটা দিয়ে চেক করবো যে আমাদের root এর চেয়ে বড় নাকি ছোট ওই নতুন value টি যদি বড় হয় তাহলে তো আমরা left এর দিকে যাবো না কারণ আমরা জানি ওইদিকে শুধু ছোট সংখ্যাই আছে আমরা যাবো right এর দিকে এবং সেদিকেই আমাদের search node পেয়ে যাবো আর যদি ছোট হয় তাহলে তো left এর দিকে যাবো। ব্যাস এই সিম্পল কাজ আর কিছু না এবং যখন আমাদের search node পেয়ে যাবো তখন সেটা রিটার্ন করে দিবো।
+
+</br>
+
+> ওকে নিচে কোড দেওয়া হলো এবং সাথে কমেন্ট করে দেওয়া হলো কোন লাইন কি করছে।
+
+```js
+// searching node in binary tree
+findNode(value) {
+    // চেক করা হচ্ছে যদি আমাদের tree তে কোনো node ই না থাকে তাহলে null রিটার্ন করবে।
+    if (!this.root) {
+      return null;
+    }
+
+    // আমাদের বর্তমান root কে একটি variable এর মধ্যে রাখলাম।
+    let currentRoot = this.root;
+
+    // আমাদের root যদি থাকে তাহলে এই while loop চলবে।
+    while (currentRoot) {
+
+      // চেক করা হচ্ছে যে আমাদের currentRoot এর যে value আছে যেটা কি আমরা যে node খুজছি সেটার সাথে মিলে?
+      if (currentRoot.value === value) {
+        // মিলে গেলে আমাদের search node এই currentRoot তাই সেটা রিটার্ন করে দিচ্ছি।
+        return currentRoot;
+      }
+      // চেক করা হচ্ছে আমরা যে node খুজছি সেটা কি আমাদের currentRoot এর value এর থেকে ছোট।
+      else if (value < currentRoot.value) {
+        // ছোট হলে আমাদের currentRoot করে দিবো currentRoot এ থাকা left কে কারণ আমরা জানি যে আমাদের সব ছোট সংখ্যা রয়েছে left এর দিকে।
+        currentRoot = currentRoot.leftChid;
+      } else {
+        // আর বড় হলে আমাদের currentRoot করে দিবো currentRoot এর right কে কারণ ওইদিকে সব বড় সংখ্যা রয়েছে।
+        currentRoot = currentRoot.rightChild;
+      }
+    }
+  }
+
+```
